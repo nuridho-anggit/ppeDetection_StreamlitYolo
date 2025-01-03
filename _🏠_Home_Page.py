@@ -31,17 +31,67 @@ image_comparison(
 )
 
 lorem_ipsum_text = """
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+# Documentation
+
+## Overview
+This Streamlit application is designed for Personal Protective Equipment (PPE) detection using machine learning models. The application allows users to input RTSP streams, videos, or webcam feeds for real-time or batch analysis.
+
+## Features
+1. **Confidence Adjustment:** Users can set a confidence threshold for detection results via the sidebar slider.
+2. **Source Selection:** Supports multiple input sources including:
+   - RTSP streams
+   - Uploaded videos
+   - Webcam feeds
+3. **Model Integration:** Leverages a pre-trained detection model to analyze input sources.
+
+## Code Walkthrough
+
+### Initialization
+- The application icon and page configuration are set using Streamlit's `st.set_page_config`.
+- A sidebar slider is used to adjust the detection confidence threshold.
+
+### Model Loading
+- The detection model is loaded from a specified path using the `func.load_model` function.
+
+### Source Selection
+- Users can toggle the display of the RTSP list.
+- Depending on the source selected, the application processes:
+  - **RTSP Stream:** Users can input an RTSP link for real-time analysis.
+  - **Video:** Users can analyze a pre-recorded video.
+  - **Webcam:** The application can access a connected webcam for live detection.
+
+### Functions
+- **`play_rtsp`:** Streams and analyzes RTSP feeds.
+- **`play_video`:** Processes video files.
+- **`play_webcam`:** Captures and analyzes webcam feeds.
+
+## Dependencies
+- `Streamlit`: For building the web application.
+- `Pillow`: For image handling.
+- Custom modules: `env` and `func` for configuration and utility functions.
+
+## Usage
+1. Launch the application.
+2. Adjust the confidence threshold using the sidebar slider.
+3. Select the desired source (RTSP, video, or webcam).
+4. Provide the necessary inputs (e.g., RTSP link).
+5. View detection results in real-time or as output images.
+
+## Notes
+- Ensure the environment (`env`) and utility (`func`) modules are correctly configured.
+- The detection model file must be available at the specified path.
+
+## Future Enhancements
+- Add support for uploading custom models.
+- Implement advanced analytics and visualization for detection results.
+- Improve UI/UX for a more user-friendly experience.
 """
-st.header("Heading 1")
+# st.header("Heading 1")
 st.write(lorem_ipsum_text)
 
-st.subheader("Sub-Heading 2")
-
-st.text(lorem_ipsum_text)
+# st.subheader("Sub-Heading 2")
+#
+# st.text(lorem_ipsum_text)
 
 file_path = "dokumentasi.pdf"
 

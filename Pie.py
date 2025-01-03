@@ -20,23 +20,6 @@ from pyecharts.charts import Pie
 
 
 def main():
-    # ST_PAGES = {
-    #     "Basic line chart": render_basic_line,
-    #     "Basic area chart": render_basic_area,
-    #     "Stacked area chart": render_stacked_area,
-    #     "Mixed line and bar": render_mixed_line_bar,
-    #     "Custom pie chart": render_custom_pie,
-    #     "Effect scatter chart": render_effect_scatter,
-    #     "Calendar heatmap": render_calendar_heatmap,
-    #     "Basic treemap": render_treemap,
-    #     "Datazoom": render_datazoom,
-    #     "Dataset": render_dataset,
-    #     "Map": render_map,
-    #     "Click event": render_event,
-    #     "Liquidfill": render_liquid,
-    #     "Wordcloud": render_wordcloud,
-    # }
-
     PY_ST_PAGES = {
         "Basic bar chart": render_bar_py,
         "Custom themes": render_custom_py,

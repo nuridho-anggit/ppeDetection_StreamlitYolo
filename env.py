@@ -3,7 +3,7 @@ import sys
 from PIL import Image
 
 MODEL_DIR = Path('weights')
-DETECTION_MODEL = MODEL_DIR / 'ppe-yolov8m-200epoch.pt'
+DETECTION_MODEL = MODEL_DIR / 'yolov8n-epoch50-lr0001.pt'
 ERSGAN_MODEL = MODEL_DIR / 'RealESRGAN_x4.pth'
 
 

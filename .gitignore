@@ -1,0 +1,8 @@
+.venv
+.streamlit
+.idea
+__pycache__
+weights
+runs
+temp
+sql
